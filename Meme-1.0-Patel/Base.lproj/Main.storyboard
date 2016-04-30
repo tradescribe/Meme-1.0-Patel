@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meme_1_0_Patel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,112 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O2g-Ir-k87">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="80" y="236" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joE-s6-KMF">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xMQ-HO-Hjn">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139.5" y="64" width="121" height="30"/>
+                                </variation>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xte-E2-dLg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jfz-ri-IqW"/>
+                                    <barButtonItem image="collection_30x30" width="42" style="plain" id="qjG-2h-L2L">
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="wgm-Q2-s3w"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PAY-sd-itU"/>
+                                    <barButtonItem title="Item" image="MemeGenerator_180 copy" id="za4-8i-bPP"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gzJ-8q-vVj"/>
+                                    <barButtonItem image="Table" width="46" style="plain" id="eaX-O8-3h8">
+                                        <connections>
+                                            <action selector="ShareMemeAction:" destination="BYZ-38-t0r" id="o4U-Ga-bfm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1ST-XQ-GWi"/>
+                                </items>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="535" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="joE-s6-KMF" secondAttribute="bottom" constant="92" id="Ap7-fD-xsx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xte-E2-dLg" secondAttribute="bottom" constant="34" id="Ffo-zx-tZi"/>
+                            <constraint firstAttribute="trailing" secondItem="Xte-E2-dLg" secondAttribute="trailing" id="NW0-EJ-gy1"/>
+                            <constraint firstItem="joE-s6-KMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rAd-0K-8Vl"/>
+                            <constraint firstItem="O2g-Ir-k87" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sTU-S1-a9W"/>
+                            <constraint firstItem="O2g-Ir-k87" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xm7-CO-p8s"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="O2g-Ir-k87"/>
+                                <exclude reference="joE-s6-KMF"/>
+                                <exclude reference="xMQ-HO-Hjn"/>
+                                <exclude reference="Xte-E2-dLg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="sTU-S1-a9W"/>
+                                <exclude reference="xm7-CO-p8s"/>
+                                <exclude reference="rAd-0K-8Vl"/>
+                                <exclude reference="NW0-EJ-gy1"/>
+                                <exclude reference="Ap7-fD-xsx"/>
+                                <exclude reference="Ffo-zx-tZi"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="O2g-Ir-k87"/>
+                                <include reference="joE-s6-KMF"/>
+                                <include reference="xMQ-HO-Hjn"/>
+                                <include reference="Xte-E2-dLg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="sTU-S1-a9W"/>
+                                <include reference="xm7-CO-p8s"/>
+                                <include reference="rAd-0K-8Vl"/>
+                                <include reference="NW0-EJ-gy1"/>
+                                <include reference="Ap7-fD-xsx"/>
+                                <include reference="Ffo-zx-tZi"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="BottomBoxOutlet" destination="joE-s6-KMF" id="OVA-ys-4J6"/>
+                        <outlet property="ImageViewOutlet" destination="O2g-Ir-k87" id="6iR-7G-cEO"/>
+                        <outlet property="ToolBarOutlet" destination="Xte-E2-dLg" id="vV5-LD-oJx"/>
+                        <outlet property="TopBoxOutlet" destination="xMQ-HO-Hjn" id="vpW-7S-ses"/>
+                        <outlet property="UseCameraOutlet" destination="za4-8i-bPP" id="3By-02-AlW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="373.5" y="293"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MemeGenerator_180 copy" width="60" height="60"/>
+        <image name="Table" width="30" height="30"/>
+        <image name="collection_30x30" width="30" height="30"/>
+    </resources>
 </document>
